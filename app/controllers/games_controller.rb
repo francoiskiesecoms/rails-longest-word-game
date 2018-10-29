@@ -16,11 +16,12 @@ class GamesController < ApplicationController
     letters = params[:letters].split(" ").join
     # word_hash = letter_count(@word)
     if (data_hash["found"] == false)
-      @score = "not an english word"
+      @answer = "not an english word"
     elsif @word.chars.all? { |letter| @word.count(letter) <= letters.count(letter) } == false
-      @score = "letters not in grid"
+      @answer = "letters not in grid"
     else
-      @score = "Well Done"
+      @answer = "Well Done"
+      session[:answer] += @word.size
     end
   end
 end

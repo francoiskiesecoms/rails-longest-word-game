@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  width: 1450px;
+  height: 100vh;
+  background-color: rgba(250,250,250,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  padding: 30px;                              /* Internal space */
+  border-radius: 4px;                         /* Small radius */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;     /* OR subtle border */
+}
+
